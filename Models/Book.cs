@@ -9,7 +9,7 @@ namespace api.Models
         public int Id{get;set;}
 
         public override string ToString(){
-            return "Title: {0}; Author: {1}, ISBN: {2}, Genre {3}; ID: {4}" Title, Author, Isbn, Genre, Id;
+            return Id + " " + Title +  " " + Author+" " + Genre+  " " + Isbn;
         }
     }
 }
