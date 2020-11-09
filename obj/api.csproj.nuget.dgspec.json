@@ -38,7 +38,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

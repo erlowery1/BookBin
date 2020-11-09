@@ -6494,7 +6494,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.AspNetCore.Cors >= *",
+      "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "System.Data.SQLite.Core >= 1.0.113.5"
     ]
@@ -6536,7 +6536,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[2.2.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

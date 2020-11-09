@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.Models;
+using api.Models.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +15,21 @@ namespace api.Controllers
     public class booksController : ControllerBase
     {
         // GET: api/books
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Book> Get()
         {
-            return new string[] { "value1", "value2" };
+            IGetAllBooks readObject = new ReadBookData();
+            return readObject.GetAllBooks();
         }
 
         // GET: api/books/5
+        [EnableCors("AnotherPolicy")]
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Book Get(int id)
         {
-            return "value";
+            IGetBook readObject = new ReadBookData();
+            return readObject.GetBook(id);
         }
 
         // POST: api/books
